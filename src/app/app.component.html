@@ -1,5 +1,19 @@
 <nav class=" navbar navbar-dark bg-dark">
-  <a href="/" class="navbar-brand m-2">
-    Empleados
-  </a>
+  <div class="navbar-brand ">
+        <div class="mx-5">
+          <span class="mx-5" (click)="value = 'personas'"> Personas</span>
+
+          <span class="mx-5" (click)="value = 'puestos'"> Puestos </span>
+
+          <span class="mx-5" (click)="value = 'empleados-puestos'"> Empleados Puestos </span> 
+        </div>
+  </div>
 </nav>
+
+<span *ngIf="value === 'personas' || value === ''">
+  <app-personas></app-personas>
+</span>
+
+<span *ngIf="value === 'puestos'">
+  <app-puesto></app-puesto>
+</span>

@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12 mt-5">
+        <ul class="list-grou p">
+          <li *ngFor="let persona of listPersona" class="list-group-item list-group-item-action">
+                {{ persona.id }}
+                {{ persona.nombre }}
+                {{ persona.apellidos }}
+                {{ persona.fechaNacimiento }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>

@@ -2,16 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { PersonasComponent } from './personas/personas.component';
-import { PuestosComponent } from './puestos/puestos.component';
-import { EmpleadosPuestosComponent } from './empleados-puestos/empleados-puestos.component';
-
+import { PuestoComponent } from './components/puesto/puesto.component';
+import { PersonasComponent } from './components/personas/personas.component';
+import { EmpleadoPuestoComponent } from './components/empleado-puesto/empleado-puesto.component';
 @NgModule({
   declarations: [
     AppComponent,
+    PuestoComponent,
     PersonasComponent,
-    PuestosComponent,
-    EmpleadosPuestosComponent
+    EmpleadoPuestoComponent,
   ],
   imports: [
     BrowserModule
