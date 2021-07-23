@@ -3,3 +3,25 @@
 body{
     background: #bdc3c7;
 }
+
+.borrar{
+    position:absolute;
+    top: 15px;
+    right: 21px;
+    width: 6%;
+}
+
+.search{
+    align-items: flex-end;
+    width: 46%;
+}
+
+:host::ng-deep .list-group-item {
+    position: relative;
+    display: block;
+    padding: 2.5rem 1rem !important;
+    color: #212529;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}

@@ -1,5 +1,5 @@
 <nav class=" navbar navbar-dark bg-dark">
-  <div class="navbar-brand ">
+  <div class="navbar-brand mx-5">
         <div class="mx-5">
           <span class="mx-5" (click)="value = 'personas'"> Personas</span>
 
@@ -10,10 +10,20 @@
   </div>
 </nav>
 
-<span *ngIf="value === 'personas' || value === ''">
-  <app-personas></app-personas>
-</span>
 
-<span *ngIf="value === 'puestos'">
-  <app-puesto></app-puesto>
-</span>
+<div class="row">
+  <div class="col-12">
+    <span *ngIf="value === 'personas' || value === ''">
+      <app-personas></app-personas>
+    </span>
+    
+    <span *ngIf="value === 'puestos'">
+      <app-puesto></app-puesto>
+    </span>
+
+    <span *ngIf="value === 'empleados-puestos'">
+      <app-empleado-puesto></app-empleado-puesto>
+    </span>
+  </div>
+
+</div>

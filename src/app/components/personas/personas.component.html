@@ -1,14 +1,56 @@
 <div class="container">
     <div class="row">
-      <div class="col-12 mt-5">
-        <ul class="list-grou p">
-          <li *ngFor="let persona of listPersona" class="list-group-item list-group-item-action">
-                {{ persona.id }}
-                {{ persona.nombre }}
-                {{ persona.apellidos }}
-                {{ persona.fechaNacimiento }}
+      <div class="col-8 w-50 my-5">
+        <div class="row form-group ">
+            <div class="my-2 col-10">
+              <input type="text"  [(ngModel)]="search" placeholder="Ingresa id" class="form-control">    
+            </div>
+            <div class="d-flex col-2" (click)="getPersonabyId()">
+                <img src="../../../assets/img/search-button.svg" alt="search-button" class="search">
+            </div>
+        </div>
+        <div *ngIf="this.flag" class="row">
+            <div class="col-10">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-action">
+                        {{ this.searchPerson.id }}
+                        {{ this.searchPerson.nombre }}
+                       {{ this.searchPerson.apellidos }}
+                      {{ this.searchPerson.fechaNacimiento }}
+                    </li>
+                </ul>
+                
+            </div>
+            <div class="d-flex col-2" (click)="clearVar()">
+                <img src="../../../assets/img/cerrar.png" alt="search-button" class="search">
+            </div>
+        </div>
+        <ul *ngIf="!this.flag"  class="list-group">
+          <li *ngFor="let persona of this.personas" class="list-group-item list-group-item-action" (click)="updatePersona(persona)">
+
+                <span class="mx-3">{{ persona.id }}</span>
+                <span class="mx-3">{{ persona.nombre }}</span>
+                <span class="mx-3">{{ persona.apellidos }}</span>
+                <span class="mx-3">{{ persona.fechaNacimiento }}</span>
+                <div>
+                    <img src="../../../assets/img/delete-button.svg" alt="detele" class="borrar" (click)="deletePersona(persona)">
+                </div>
           </li>
         </ul>
       </div>
+      <div class="col-4 card my-5 w-50">
+        <span class="my-3">Insertar personas</span>
+        <div class="form-group my-2 mx-2">
+            <input type="text" [(ngModel)]="selectedPersona.nombre" placeholder="Ingresa tu nombre" class="form-control">
+        </div>
+        <div class="form-group my-2 mx-2">
+            <input type="text" [(ngModel)]="selectedPersona.apellidos" placeholder="Ingresa tus apellidos" class="form-control">
+        </div>
+        <div class="form-group my-2 mx-2">
+            <input type="date" [(ngModel)]="selectedPersona.fechaNacimiento" placeholder="Ingresa tu fecha de nacimiento" class="form-control">
+        </div>
+        <button (click)="addPersona()" (click)="getAllPersonas()">Guardar</button>
+      </div>
     </div>
-  </div>
+</div>
+  

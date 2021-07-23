@@ -1,5 +1,9 @@
+import { Personas } from "./personas";
+import { Puesto } from "./puesto";
+
 export class EmpleadoPuesto {
     id: number;
-    puesto: string;
-    persona: string;
+    puesto: Puesto;
+    persona: Personas;
 }
+

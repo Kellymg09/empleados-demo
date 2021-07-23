@@ -1,0 +1,16 @@
+
+.content-input input,
+.content-select select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+    width: 100% !important;
+}
+
+.sel-st{
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 9px;
+    background: white;
+    padding-bottom: 1em;
+}

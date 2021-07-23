@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { PuestoComponent } from './components/puesto/puesto.component';
 import { PersonasComponent } from './components/personas/personas.component';
 import { EmpleadoPuestoComponent } from './components/empleado-puesto/empleado-puesto.component';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,7 +15,8 @@ import { EmpleadoPuestoComponent } from './components/empleado-puesto/empleado-p
     EmpleadoPuestoComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

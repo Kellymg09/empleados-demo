@@ -14,12 +14,8 @@ export class AppComponent {
 
 
 
-  listPuestos: Puesto[] =[ 
-    {id:1, nombre:""}
-  ]
-
-  listEmpleadosPuestos: EmpleadoPuesto[] =[ 
-    {id:1, puesto:"", persona:""}
-  ]
-
+        //   nombre: new FormControl('', [Validators.required]),
+        // apellidos: new FormControl('', [Validators.required]),
+        // id: new FormControl('', [Validators.required]),
+        // fechaNacimiento: new FormControl('', [Validators.required]),
 }
